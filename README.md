@@ -113,7 +113,22 @@ On failure, in case of bad token, it should return with HTTP status code 400
 }
 ```
 
-## 2. Testing your server
+## 2. Testing your server -- Option A
+
+Install newman (We'll use this for API testing)
+
+    npm install -g newman
+
+You may have to use `sudo` while installing newman.
+
+Once it's installed, run the following command to run the test cases against your server
+
+    newman run --env-var baseUrl="<YOUR_SERVER_URL>" --env-var username="<SOME_VALID_USERNAME>" https://raw.githubusercontent.com/UXGorilla/hiring-backend/main/collection.json
+    
+You can use baseUrl as `https://enigmatic-ridge-06779.herokuapp.com/` to test a valid server 
+
+
+## 2. Testing your server -- Option B
 
 You will need to [Download Postman](https://www.postman.com/downloads/) to test your server.
 
